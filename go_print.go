@@ -9,9 +9,10 @@ func Print(slice []int) {
 }
 
 func Print2D(slice [][]int) {
-	for i := 0; i < len(slice); i++ {
-		for j := 0; j < len(slice[i]); j++ {
-			fmt.Print(slice[i])
+	for _, row := range slice {
+		for _, col := range row {
+			fmt.Printf("%d ", col)
 		}
+		fmt.Println()
 	}
 }
